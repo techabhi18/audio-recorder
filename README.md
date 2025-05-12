@@ -37,7 +37,7 @@ sox --version
 ### Clone & Install
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/techabhi18/audio-recorder.git
 cd audio-recorder-app
 npm install
 ```
