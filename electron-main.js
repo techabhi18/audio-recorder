@@ -9,10 +9,8 @@ let isRecording = false;
 app.whenReady().then(() => {
   console.log("Electron app running");
 
-  // Create tray icon
   tray = new Tray(path.join(__dirname, "icon.png"));
 
-  // Function to update tooltip based on recording state
   const updateTray = () => {
     tray.setToolTip(
       isRecording ? "Recording in progress..." : "Audio Recorder"
@@ -95,10 +93,9 @@ app.whenReady().then(() => {
     },
   ]);
 
-  updateTray(); // initial tooltip
+  updateTray();
   tray.setContextMenu(contextMenu);
 
-  // Left click opens the context menu
   tray.on("click", () => {
     tray.popUpContextMenu();
   });
